@@ -47,20 +47,13 @@
   }
 }
 
-@media (max-width: 480px) {
-  .sidebar-container {
-    flex: 0 0 50%;
-  }
 
-  .content-container {
-    flex: 1;
+@media (max-width: 520px) {
+  .app-container{
+    display: none;
   }
 }
-.style{
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  justify-content: space-between;
-}
+
 
 @media (max-width: 1080px) {
   .style{
