@@ -1,13 +1,83 @@
-body {
+
+
+
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* styles.css */
+.nav-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Ensures the container takes up the full viewport height */
+.app-container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+
+
+
+/* Sidebar takes 30% of the width */
+.sidebar-container {
+  flex: 0 0 0 30%;
+  background-color: #f0f0f0; /* Example background, adjust as needed */
+  border-right: 1px solid #ddd; /* Optional border */
+}
+
+/* Content takes the remaining 70% of the width */
+.content-container {
+  flex: 1;
+  padding: 20px; /* Optional padding */
+  background-color: #ffffff; /* Example background, adjust as needed */
+  overflow-y: auto; /* Allows scrolling if content overflows */
+}
+
+/* For responsiveness: Adjust flex properties for smaller screens */
+@media (max-width: 768px) {
+  .sidebar-container {
+    flex: 0 0 40%;
+  }
+
+  .content-container {
+    flex: 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar-container {
+    flex: 0 0 50%;
+  }
+
+  .content-container {
+    flex: 1;
+  }
+}
+.style{
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  justify-content: space-between;
+}
+
+@media (max-width: 1080px) {
+  .style{
+    display: flex;
+    flex-direction: column;
+  }
+
+}
+.main {
+  background-color: rgb(243, 242, 242);
+  padding: 20px;
+}
+.sub {
+  background-color: #fff;
+  margin: 20px;
+}
+
+h2{
+  margin: 20px;
 }
